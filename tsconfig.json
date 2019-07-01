@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": "../node_modules",
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es6",
+    "jsx": "react",
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "allowJs": true,
+    "types": [
+      "cypress",
+      "node",
+      "cypress"
+    ] 
+  },
+  "include": [
+    "**/*.ts"
+  ]
+}
