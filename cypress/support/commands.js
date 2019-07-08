@@ -23,17 +23,22 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
-import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
-addMatchImageSnapshotCommand({
+
+// tslint:disable-next-line:no-var-requires
+const command = require('cypress-image-snapshot/command')
+command.addMatchImageSnapshotCommand({
     failureThreshold: 0.00,
     failureThresholdType: 'percent',
     customDiffConfig: { threshold: 0.0 },
     capture: 'viewport',
 });
-Cypress.Commands.add("setResolution", (size) => {
+
+Cypress.Commands.add('changeResolution', function (size) { 
     if (Cypress._.isArray(size)) {
         cy.viewport(size[0], size[1]);
+
     } else {
         cy.viewport(size);
+        cy.debug(size);
     }
-})
+});

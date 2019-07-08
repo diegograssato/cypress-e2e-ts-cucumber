@@ -7,7 +7,7 @@ import { GoogleSearchPage } from '../../../pages/google/google-search-page';
 import { GoogleResultsPage } from '../../../pages/google/google-results-page';
 
 Given(/^I execute a long task in my database$/, () => {
-  executeCommand('yarn --version');
+  executeCommand('ps >> tux.txt');
    
 });
 

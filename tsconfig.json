@@ -7,17 +7,21 @@
     "target": "es6",
     "jsx": "react",
     "lib": [
+      "es2015",
       "es6",
       "dom"
     ],
     "allowJs": true,
     "types": [
       "cypress",
-      "node",
-      "cypress"
+      "node"
     ] 
   },
   "include": [
-    "**/*.ts"
+    "node_modules/cypress",
+    "cypress/*/*.ts"
+  ],
+   "files": [
+    "types/cypress-image-snapshot/index.d.ts"
   ]
 }
